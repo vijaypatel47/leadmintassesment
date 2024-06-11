@@ -1,0 +1,59 @@
+GET http://localhost:3000/
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "deviceId":"BCD34",
+    "name":"ram",
+    "phone":"tapal chal",
+    "availCoins":120,
+    "password":"ghnsyam123"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "name":"ram",
+   "password":"ghnsyam123"
+}
+
+###
+
+POST http://localhost:3000/chatroom
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicmFtIiwiaWF0IjoxNzE4MDkzNDExfQ.Wl-zSuDnWR7HlpdlTIEh2oIgTbMn9VQJJLaUtEmzzcY
+
+
+{
+    "roomName":"college_chat",
+    "capacity":6
+}
+
+###
+POST http://localhost:3000/invite
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ2huc3lhbSIsImlhdCI6MTcxODA5MDkwN30.oNKDeN30iIT66o5xdibhnKoaCK6nroMf-b2sGMqqBrM
+
+{
+    "roomId":4,
+    "recipientId":2
+}
+
+
+###
+GET http://localhost:3000/profile/1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ2huc3lhbSIsImlhdCI6MTcxODA5MDkwN30.oNKDeN30iIT66o5xdibhnKoaCK6nroMf-b2sGMqqBrM
+
+###
+
+
+POST http://localhost:3000/friend-requests
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ2huc3lhbSIsImlhdCI6MTcxODA5MDkwN30.oNKDeN30iIT66o5xdibhnKoaCK6nroMf-b2sGMqqBrM
+
+{
+    "senderId":4,
+    "reciverId":2
+}
